@@ -25,7 +25,7 @@ public class MathUtility {
         }
         //sống sót đến chố này , sure n = 2 ... 20 Vì vậy nếu ko chết dọc đường ở 2 cum ì ở trên rồi, không cần else nếu trước đó xài return
 
-        long result = 1;// giai thuawf khởi đầu la 1
+        long result = 10;// giai thuawf khởi đầu la 1
         // nhân dồn 2 3 4 5...n vào biến này thì thành n!
 
         for (int i = 2; i <= n; i++) {
