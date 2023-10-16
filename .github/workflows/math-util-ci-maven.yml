@@ -21,4 +21,12 @@ jobs:                     # thì tự đônngj thực thi các lệnh dưới đ
         cache: maven
     - name: Build with Maven  - Tạo file.jar .war    #5. Mượn maven chạy lện đóng gói, test luôn
       run: mvn -B package --file pom.xml
-
+      
+    - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
+      run: mkdir staging && cp target/*.jar staging # tạo thư mục staging chứa file .jar .war sau khi build      
+     
+    - name: Make hyperlink to jar-war file # Tạo hyperlink để download build 
+      uses: actions/upload-artifact@v1
+      with:
+       name: Hãy-Click-em-để-lấy-file-jar-về-nhà-local  #tạo hyperlink tới file.jar
+       path: staging
